@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Six</title>
+    <!-- daisyui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font -->
+    <style>
+      .font-lato {
+        font-family: "Lato", sans-serif;
+      }
+      /* Spinner styles */
+      #spinner {
+        display: none;
+        animation: spin 1s linear infinite;
+        margin: 20px auto;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- tailwind shared style -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              primary: "rgba(14, 122, 129, 1)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-lato">
+    <!-- header section -->
+    <header class="w-11/12 mx-auto mt-4">
+      <!-- nav section -->
+      <nav>
+        <div class="flex justify-between mx-auto items-center">
+          <div class="flex gap-2 items-center">
+            <img class="h-full" src="images/logo.webp" alt="" />
+            <h2 class="font-black text-3xl hidden md:block">Peddy</h2>
+          </div>
+          <div class="">
+            <ul class="font-normal text-base flex gap-7 items-center">
+              <li><a href="">Home</a></li>
+              <li><a href="">Shop</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <i class="fa-regular fa-user border rounded-full p-3"></i>
+          </div>
+        </div>
+      </nav>
+      
+    <script src="script.js"></script>
+  </body>
+</html>

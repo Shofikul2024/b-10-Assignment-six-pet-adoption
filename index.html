@@ -101,8 +101,78 @@
             you're not just getting a companion, but you’re also giving them a
             home filled with warmth and affection. Start your friendship today!
           </p>
-        
-   
+        </div>
+        <!-- api all content -->
+        <div>
+          <!-- pet category buttons -->
+          <div
+            id="category"
+            class="py-5 grid grid-cols-2 gap-4 mx-auto md:flex justify-between"
+          ></div>
+          <!-- shorting -->
+          <div class="flex justify-between items-center my-4 mb-8">
+            <h1 class="font-black text-2xl">Best Deal For you</h1>
+            <button
+              onclick="loadShortPets()"
+              class="btn rounded-xl text-white font-bold text-xl bg-primary"
+            >
+              Sort by Price
+            </button>
+          </div>
+          <!-- spinner -->
+          <span id="spinner" class="loading loading-infinity loading-lg"></span>
+          <!-- pet card section -->
+          <div class="grid grid-cols-1 md:flex gap-5">
+            <!-- left side -->
+            <div
+              id="petCard"
+              class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+            ></div>
+            <!-- right side -->
+            <div
+              id="photos"
+              class="w-full md:w-1/4 grid grid-cols-2 grid-flow-row auto-rows-max border border-gray-400 rounded-xl"
+            ></div>
+          </div>
+          <!-- pet card section end -->
+        </div>
+      </section>
+    </main>
+    <!-- detail modal -->
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="modal-content"></div>
+        <div class="modal-action">
+          <form method="dialog">
+             
+
+            <button class="active p-2 rounded-lg hover:bg-slate-200">
+              Cancel
+            </button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <!-- countdown modal -->
+    <div id="countdown-modal">
+      <dialog id="my_modal_2" class="modal">
+        <div class="modal-box text-center">
+          <img
+            class="mx-auto mb-3"
+            src="https://img.icons8.com/?size=48&id=q6BlPrJZmxHV&format=png"
+            alt=""
+          />
+          <h3 class="text-lg font-bold">Congrates</h3>
+          <p class="py-4">Adoption Process is Start For Your Pet</p>
+          <span id="countdownValue" class="font-bold text-2xl">3</span>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+          <button id="close">close</button>
+        </form>
+      </dialog>
+    </div>
+    
+    <!-- footer end -->
     <script src="script.js"></script>
   </body>
 </html>

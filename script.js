@@ -1,4 +1,4 @@
-console.log("hello");
+ console.log("hello");
 
 const removeActiveClass = () => {
   const buttons = document.getElementsByClassName("category-btn");
@@ -95,4 +95,61 @@ const displayPetPhotos = (photos) => {
   petPhoto.append(div);
 };
 
- 
+// display pet details
+const displayPetDetails = (petDetails) => {
+  const details = document.getElementById("modal-content");
+  document.getElementById("my_modal_5").showModal();
+  details.innerHTML = `
+  <img class="rounded-lg mb-3 w-full" src="${petDetails.image}">
+  <h1 class="font-bold text-2xl mb-3" >${petDetails.pet_name}</h1>
+ <div class="grid grid-cols-2 gap-2 mb-3">
+ <p class="flex items-center text-gray-500 gap-2"><img src="https://img.icons8.com/?size=16&id=68585&format=png"> Breed: ${
+   petDetails.breed ? petDetails.breed : "Not available"
+ }</p>
+    <p class="flex items-center text-gray-500 gap-2"><img class="w-4" src="https://img.icons8.com/?size=24&id=84997&format=png"> Birth: ${
+      petDetails.date_of_birth ? petDetails.date_of_birth : "Not available"
+    }</p>
+    <p class="flex items-center text-gray-500 gap-2"><img class="w-4" src="https://img.icons8.com/?size=32&id=16275&format=png"> Gender: ${
+      petDetails.gender ? petDetails.gender : "Not available"
+    }</p>
+    <p class="flex items-center text-gray-500 gap-2"><img class="w-4" src="https://img.icons8.com/?size=24&id=85782&format=png"> Price: ${
+      petDetails.price
+    }$ </p>
+    <p class="flex items-center text-gray-500 gap-2 mb-3><img class="w-4" src="https://img.icons8.com/?size=24&id=85782&format=png"> Vaccinated status: ${
+      petDetails.vaccinated_status
+        ? petDetails.vaccinated_status
+        : "Not available"
+    }</p>
+    </div>
+    <hr>
+    <div class="mt-3"><h2 class="font-semibold text-base mb-3">Details Information</h2>
+    <p class="text-gray-500">${petDetails.pet_details}</p>
+    </div>
+  `;
+};
+
+// display all pets
+const displayAllPets = (pets) => {
+  const petContainer = document.getElementById("petCard");
+  petContainer.innerHTML = "";
+
+  if (pets.length == 0) {
+    petContainer.classList.remove("grid");
+    petContainer.innerHTML = `
+     <div>
+     <div class="bg-gray-200 border-none rounded-3xl text-center p-8 ">
+              <img class="mx-auto mb-6" src="images/error.webp" alt="" />
+              <h2 class="font text-3xl mb-6">No Information Available</h2>
+              <p class="font-normal text-base text-gray-400 ">
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a.
+              </p>
+          </div></div>
+    `;
+    return;
+  } else {
+    petContainer.classList.add("grid");
+  }
+
+   

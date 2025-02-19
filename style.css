@@ -1,5 +1,5 @@
-.active{
-    background-color:rgba(14, 122, 129, 0.1);
+ .active{
+    background-color:rgba(14, 121, 129, 0.1);
     border: 1px solid;
-    border-color:rgba(14, 122, 129, 1);
+    border-color:rgb(14, 116, 129);
 }

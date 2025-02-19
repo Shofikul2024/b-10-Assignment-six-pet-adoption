@@ -1,4 +1,4 @@
- console.log("hello");
+console.log("hello");
 
 const removeActiveClass = () => {
   const buttons = document.getElementsByClassName("category-btn");
